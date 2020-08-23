@@ -15,7 +15,7 @@ const sendMail = async (payload) => {
         let mailResponse = await sgMail.send(msg);
         return mailResponse;
     } catch(e){
-        console.log(e);
+        console.log(JSON.stringify(e, null, 2));
         throw e;
     }
 }
